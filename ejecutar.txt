@@ -1,0 +1,7 @@
+---Activar entorno---
+C:\crear_solicitudes-main\venv_solicitud\Scripts\activate
+
+---Ejecutar aplicacion---
+cd C:\crear_solicitudes-main
+python crear_solicitudes.py
+
