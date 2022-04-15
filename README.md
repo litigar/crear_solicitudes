@@ -70,14 +70,15 @@ Estando en la terminal en la ruta principal del proyecto, ejecute los siguientes
 - Entorno Virtual Activo
 > - Debe aparacer entre paréntesis al lado izquierdo de la ruta el nombre del entorno.
 > - (venv_solicitud) C:\crear_solicitudes-main>
-## 2. prepare el archivo cargue_masivo.csv 
+## 2. Prepare el archivo cargue_masivo.csv 
 - coloque los registros de las solicitudes a crear en el archivo cargue_masivo.csv
-## 3. ubique los archivos pdf/zip en la carpeta pdfs
+## 3. Ubique los archivos pdf/zip en la carpeta pdfs
 - Tenga en cuenta la estructura de los nombres de los archivos
-## 4. Ejecute la aplicaciòn
-> python crear_solicitudes.py
+## 4. Ejecute la aplicación
+En la terminal, ejecute el siguiente comando
+> python crear_ida_vuelta.py
 - Si no funciona la instrucción con la palabra python, utilice la palabra py
-> py crear_solicitudes.py
+> py crear_ida_vuelta.py
 - Si al realizar una ejeción sale un error y no se crean las solicitudes, intente de nuevo la ejecución.
 - Si el error persiste, informe al administrador (grupo de página)
 
