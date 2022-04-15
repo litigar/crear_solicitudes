@@ -45,7 +45,7 @@ Con el entorno virtual activo ejecute el siguiente comando
 - El numero de ejecución permite ver resumen del cargue desde litiradicaciones desde la siguiente ruta
 > masivos -> Cargar archivos masivos -> Consultar ultimos cargues
 # Funcionalidad
-## 1. Selección de solicitudes para descargar pdfs
+## 1. Ingreso de registros para crear las solicitudes
 - En el archivo plano cargue_masivo.csv se deben colocar los registros con los cuales se van a crear las solicitudes.
 - Estructura del Archivo de Cargue: Delimitador punto y coma (;) La primera fila del archivo no se va a procesar, contiene los títulos de los campos.:
 > PROCESO_ID; RADICACION; LOCALIDAD; DESPACHO; CLIENTE_ID; DEMANDANTE; DEMANDADO; TIPO_DOCUMENTO; TIPO_ENVIO; FECHA_TERMINO(yyyy-mm-dd o dd/mm/yyyy); HORA(HH:MM); LOCALIDAD_ORIGEN; OTRA_ENTIDAD_LUGAR_RADICACION; PAQUETES; CANTIDAD_FOLIOS; RETORNAR_ACUSE (S/N); DESTINATARIO_RETORNO; TELEFONO_RETORNO; DIRECCION_RETORNO; OBSERVACIONES; CODIGO_CLIENTE; CEDULA_CLIENTE
@@ -73,6 +73,8 @@ Estando en la terminal en la ruta principal del proyecto, ejecute los siguientes
 ## 2. prepare el archivo cargue_masivo.csv 
 - coloque los registros de las solicitudes a crear en el archivo cargue_masivo.csv
 ## 3. ubique los archivos pdf/zip en la carpeta pdfs
+- Tenga en cuenta la estructura de los nombres de los archivos
+## 4. Ejecute la aplicaciòn
 > python crear_solicitudes.py
 - Si no funciona la instrucción con la palabra python, utilice la palabra py
 > py crear_solicitudes.py
