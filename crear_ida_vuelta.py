@@ -447,6 +447,11 @@ class crear_solicitudes(object):
             # UtilLog.get_instance().write(f"subir_csv solicitud_id {radicacion_id} {json_item}")
             if json_item["estado"] == "ok":
                 self.masivo_file_id = json_item["masivo_file_id"]
+                UtilLog.get_instance().write("-------------------------------------------------------------")
+                UtilLog.get_instance().write(
+                    f"******** numero ejecucion ({json_item['masivo_file_id']}) *********"
+                )
+                UtilLog.get_instance().write("-------------------------------------------------------------")
                 return True
             else:
                 UtilLog.get_instance().write(f"subir_csv solicitud_id json_item {json_item}")
@@ -486,9 +491,12 @@ class crear_solicitudes(object):
                 self.procesar_solicitudes_hilos()
             """
 
+            UtilLog.get_instance().write("-------------------------------------------------------------")
+            UtilLog.get_instance().write("NO OLVIDE DEJAR EN CERO 0 EL PARAMETRO --> numero_ejecucion=0")
+            UtilLog.get_instance().write("-------------------------------------------------------------")
             UtilLog.get_instance().write("Para ver resumen desde litiradicaciones")
             UtilLog.get_instance().write("masivos->Cargar archivos masivos->Consultar ultimos cargues")
-            UtilLog.get_instance().write(f"numero ejecucion: ({self.masivo_file_id})")
+            UtilLog.get_instance().write(f"*** numero ejecucion: ({self.masivo_file_id}) ***")
 
 
 crear_solicitudes().run()

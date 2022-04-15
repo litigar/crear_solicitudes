@@ -1,9 +1,11 @@
 # Creación masiva de solicitudes de Radicaciones
 > Aplicacion cliente que consume un servicio de la api de litigar, para crear masivamente solicitudes de radicaciones con y sin procesos en vigilancia.
-## 1 Video explicativo de la instalación
-[![Alt text](https://img.youtube.com/vi/TWMNQ5hEILA/0.jpg)](https://www.youtube.com/watch?v=TWMNQ5hEILA)
-## 2 Video de configuración y ejecución para la creación masiva de solicitudes
-[![Alt text](https://img.youtube.com/vi/im43fsOfZSg/0.jpg)](https://www.youtube.com/watch?v=im43fsOfZSg)
+## 1 Instalación
+[![Alt text](https://img.youtube.com/vi/IuKBZi6Q6T8/0.jpg)](https://www.youtube.com/watch?v=IuKBZi6Q6T8)
+## 2 Configuración 
+[![Alt text](https://img.youtube.com/vi/huBIRNwKX2w/0.jpg)](https://www.youtube.com/watch?v=huBIRNwKX2w)
+## 3 Ejecución 
+[![Alt text](https://img.youtube.com/vi/QhFxCcpSfsg/0.jpg)](https://www.youtube.com/watch?v=QhFxCcpSfsg)
 # Versionamiento
 - Fecha primera versión: 14/04/2022
 * Python >3.6.2 +
@@ -11,9 +13,10 @@
 ## 1. Instale python desde la siguiente ruta:
 > https://www.python.org/downloads/
 ## 2. Descargue y Descomprima el proyecto
-- Descargue en la carpeta el proyecto desde github, ya sea desde un archivo zip (descomprímirlo) o por github
+- Descargue el proyecto desde github, ya sea desde un archivo zip (descomprímirlo) o por github
 > https://github.com/litigar/crear_solicitudes.git
-- Descomprima el archivo zip 
+- Descomprima el archivo zip
+- Copie la carpeta descomprimida en la raíz de alguna unidad, para el ejemplo se coloca en C:\crear_solicitudes-main 
 ## 3. Instale el entorno virtual:
 - Abra una terminal e ingrese a la carpeta donde descomprimió el archivo zip 
 > python -m pip install virtualenv

@@ -44,13 +44,11 @@ class admin_user(object):
         print(f'autentication reponse.status_code {reponse.status_code}')
         # print(f'autentication despues json({reponse.json})')
         # print(f'autentication despues text({reponse.text})')
-        if reponse.status_code == 200:
+        if reponse.status_code == 200 or reponse.status_code == 201:
             reponse_json = reponse.json()
-            print(f"get_token json {reponse_json}")
-            print(f"autentication token {reponse_json['token']}")
+            # print(f"get_token json {reponse_json}")
+            # print(f"autentication token {reponse_json['token']}")
             self.token = reponse_json['token']
-        else:
-            print(f'autentication despues text({reponse.text})')
 
     def get_token(self):
         endpoint = self.url + 'refresh-token/'
