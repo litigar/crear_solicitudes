@@ -41,6 +41,8 @@ Con el entorno virtual activo ejecute el siguiente comando
 - Ingrese el usuario y password de litigar inmediatamente al frente de caracter igual (=)
 > - user_name=
 > - password=
+- procesar_desde_fila
+> procesar_desde_fila --> Inicia la creación de solicitudes, desde el numero de la fila indicado en este campo
 - numero_ejecucion
 > - numero_ejecucion --> Cuando se ejecuta el programa se genera un numero para poder consultar el resumen del cargue
 > - numero_ejecucion=0 --> Si el valor es 0, se crea un nuevo numero_ejecucion carga el archivo cargue_masivo.csv, procesa cada solicitud y asocia el respectivo pdf
@@ -77,7 +79,10 @@ Estando en la terminal en la ruta principal del proyecto, ejecute los siguientes
 - coloque los registros de las solicitudes a crear en el archivo cargue_masivo.csv
 ## 3. Ubique los archivos pdf/zip en la carpeta pdfs
 - Tenga en cuenta la estructura de los nombres de los archivos
-## 4. Ejecute la aplicación
+## 4. Verifique los valores de las variables en .env
+- procesar_desde_fila
+- numero_ejecucion
+## 5. Ejecute la aplicación
 En la terminal, ejecute el siguiente comando
 > python crear_ida_vuelta.py
 - Si no funciona la instrucción con la palabra python, utilice la palabra py
