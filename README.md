@@ -6,6 +6,9 @@
 [![Alt text](https://img.youtube.com/vi/huBIRNwKX2w/0.jpg)](https://www.youtube.com/watch?v=huBIRNwKX2w)
 ## 3 Ejecución 
 [![Alt text](https://img.youtube.com/vi/QhFxCcpSfsg/0.jpg)](https://www.youtube.com/watch?v=QhFxCcpSfsg)
+## 4 Actualización 
+- Cuando se modifique la funcionalidad al programa, se informará para que descarguen e instalen la nueva versión 
+[![Alt text](https://img.youtube.com/vi/qQy0Ja1Xct4/0.jpg)](https://www.youtube.com/watch?v=qQy0Ja1Xct4)
 # Versionamiento
 - Fecha primera versión: 14/04/2022
 * Python >3.6.2 +
