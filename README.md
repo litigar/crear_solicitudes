@@ -11,6 +11,7 @@
 [![Alt text](https://img.youtube.com/vi/qQy0Ja1Xct4/0.jpg)](https://www.youtube.com/watch?v=qQy0Ja1Xct4)
 # Versionamiento
 - Fecha primera versión: 14/04/2022
+- Fecha ultima actualización: 29/04/2022
 * Python >3.6.2 +
 # Instalación
 ## 1. Instale python desde la siguiente ruta:
