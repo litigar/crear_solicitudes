@@ -34,7 +34,19 @@ class crear_solicitudes(object):
         # print(f"local_path {self.local_path}")
         # print(f"init username {self.username}")
         # print(f"init usr_dicc {self.usr_dicc}")
-        self.masivo_file_id = os.environ.get("numero_ejecucion")
+        try:
+            self.procesar_desde_fila = int(os.environ.get("procesar_desde_fila"))
+        except:
+            self.procesar_desde_fila = 0
+            UtilLog.get_instance().write("No existe procesar_desde_fila")
+        try:
+            self.masivo_file_id = os.environ.get("numero_ejecucion")
+        except:
+            self.masivo_file_id = 0
+            UtilLog.get_instance().write("No existe masivo_file_id")
+
+        UtilLog.get_instance().write(f"init procesar_desde_fila {self.procesar_desde_fila}")
+        UtilLog.get_instance().write(f"init masivo_file_id {self.masivo_file_id}")
 
     __instance = None
     Lista = []
@@ -355,11 +367,11 @@ class crear_solicitudes(object):
                 if not self.enviar_solicitud_y_pdf(datos):
                     # print(f"add_solicitud intento 2 fila ({numero_fila})")
                     if not self.enviar_solicitud_y_pdf(datos):
-                        UtilLog.get_instance().write(f"No se proceso el registro {numero_fila}")
+                        UtilLog.get_instance().write(f"No se proceso la fila {numero_fila}")
                         return False
                 return True
             else:
-                UtilLog.get_instance().write(f"No se encontró registro para el registro {numero_fila}")
+                UtilLog.get_instance().write(f"No se encontró registro para la fila {numero_fila}")
                 return False
         return False
 
@@ -367,7 +379,7 @@ class crear_solicitudes(object):
         i = 0
         for dato in self.lista_solicitudes:
             i = dato["fila"]
-            if i > 1:  # La primera fila son los títulos
+            if i > 1 and i >= self.procesar_desde_fila:  # La primera fila son los títulos
                 UtilLog.get_instance().write(f"procesar_solicitudes --> add_solicitud fila ({i})")
                 self.add_solicitud(dato)
 
@@ -375,7 +387,7 @@ class crear_solicitudes(object):
         # print(f"getListaSolicitudes")
         lista = []
         i = 0
-        with open(self.file_csv, encoding="utf-8") as fname:
+        with open(self.file_csv, encoding="ISO-8859-1") as fname:
             for registro in fname:
                 i += 1
                 # print(registro)
@@ -491,12 +503,16 @@ class crear_solicitudes(object):
                 self.procesar_solicitudes_hilos()
             """
 
-            UtilLog.get_instance().write("-------------------------------------------------------------")
-            UtilLog.get_instance().write("NO OLVIDE DEJAR EN CERO 0 EL PARAMETRO --> numero_ejecucion=0")
+            if self.procesar_desde_fila > 0 or self.masivo_file_id:
+                UtilLog.get_instance().write("-------------------------------------------------------------")
+                UtilLog.get_instance().write("NO OLVIDE DEJAR EN CERO 0 LOS PARAMETROS: ")
+                UtilLog.get_instance().write(" --> numero_ejecucion=0")
+                UtilLog.get_instance().write(" --> procesar_desde_fila=0")
             UtilLog.get_instance().write("-------------------------------------------------------------")
             UtilLog.get_instance().write("Para ver resumen desde litiradicaciones")
             UtilLog.get_instance().write("masivos->Cargar archivos masivos->Consultar ultimos cargues")
             UtilLog.get_instance().write(f"*** numero ejecucion: ({self.masivo_file_id}) ***")
+            UtilLog.get_instance().write("-------------------------------------------------------------")
 
 
 crear_solicitudes().run()
