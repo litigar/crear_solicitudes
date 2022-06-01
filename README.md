@@ -22,7 +22,10 @@
 - Descomprima el archivo zip
 - Copie la carpeta descomprimida en la raíz de alguna unidad, para el ejemplo se coloca en C:\crear_solicitudes-main 
 ## 3. Instale el entorno virtual:
-- Abra una terminal e ingrese a la carpeta donde descomprimió el archivo zip 
+- Abra una terminal e ingrese a la carpeta donde descomprimió el archivo zip
+> Para ubicarse en la carpeta, en la terminal debe escribir 
+> - cd C:\crear_solicitudes-main
+- Instalar el entorno virtual
 > python -m pip install virtualenv
 > - Si no funciona la instrucción con la palabra python, utilice la palabra py
 > - py -m pip install virtualenv
@@ -72,6 +75,8 @@ Con el entorno virtual activo ejecute el siguiente comando
 # Ejecución de la aplicación
 Estando en la terminal en la ruta principal del proyecto, ejecute los siguientes pasos:
 ## 1. Asegurese de tener el entorno virtual activo
+- Ubicarse en la carpeta desde la terminal debe escribir 
+> cd C:\crear_solicitudes-main
 - Activar El Entorno Virtual
 > venv_solicitud\Scripts\activate
 > - Para el ejemplo del video, ejecutar:
@@ -91,6 +96,6 @@ En la terminal, ejecute el siguiente comando
 > python crear_ida_vuelta.py
 - Si no funciona la instrucción con la palabra python, utilice la palabra py
 > py crear_ida_vuelta.py
-- Si al realizar una ejeción sale un error y no se crean las solicitudes, intente de nuevo la ejecución.
+- Si al realizar una ejecución sale un error y no se crean las solicitudes, intente de nuevo la ejecución.
 - Si el error persiste, informe al administrador (grupo de página)
 
